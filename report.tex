@@ -1,8 +1,9 @@
 \documentclass[a4paper,14pt]{extarticle}
 \usepackage{polyglossia}
-\setmainlanguage{english}
-\setotherlanguage{russian}
-\setmainfont{DXLubava}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\setmainfont{JetBrains Mono}
+\newfontfamily{\cyrillicfonttt}{JetBrains Mono}
 \usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
 \usepackage{geometry} % Меняем поля страницы
 \geometry{left=2cm}% левое поле
@@ -21,8 +22,8 @@
 \usepackage{caption}
 \usepackage{color}
 \usepackage{xcolor}
-\usepackage{listings}
-
+% Listing environment
+\usepackage[outputdir=auxillary]{minted}
 \newcommand{\imgh}[3]
 {
 \begin{figure}[h]
