@@ -1,8 +1,9 @@
 \documentclass[a4paper,14pt]{extarticle}
 \usepackage{polyglossia}
-\setmainlanguage{english}
-\setotherlanguage{russian}
-\setmainfont{DXLubava}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily\latinfont{Courier New}
+\newfontfamily\cyrillicfont{B52}
 \usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
 \usepackage{geometry} % Меняем поля страницы
 \geometry{left=2cm}% левое поле
@@ -23,6 +24,7 @@
 \usepackage{xcolor}
 \usepackage{listings}
 
+
 \newcommand{\imgh}[3]
 {
 \begin{figure}[h]
@@ -33,6 +35,7 @@
 }
 
 \begin{document}
+
     \input{Project-Title}% это титульный лист
     \newpage
     \tableofcontents
