@@ -20,4 +20,4 @@ jobs:
 
       - name: Build pdf
         run: |
-          xetex -file-line-error -interaction=nonstopmode -shell-escape -synctex=1 -output-directory=./output/ -aux-directory=./auxillary/ -include-directory=./src/tex/ -job-name=MT.Guide master.tex
+          miktex-xetex -file-line-error -interaction=nonstopmode -shell-escape -synctex=1 -output-directory=./output/ -aux-directory=./auxillary/ -include-directory=./src/tex/ -job-name=MT.Guide master.tex
