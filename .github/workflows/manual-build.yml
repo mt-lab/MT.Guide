@@ -16,6 +16,9 @@ jobs:
           initexmf --set-config-value [MPM]AutoInstall=1
           mpm --update-db
           initexmf --update-fndb
+          mpm --verbose --package-level=basic --upgrade
+          initexmf --mkmaps
+          initexmf --update-fndb
 
       - name: Checkout repo
         uses: actions/checkout@v2
