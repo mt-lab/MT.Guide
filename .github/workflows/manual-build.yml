@@ -15,7 +15,9 @@ jobs:
           miktexsetup finish
           initexmf --set-config-value [MPM]AutoInstall=1
           initexmf --update-fndb
+          mpm --upgrade --package-level=essential
           mpm --update-db
+          mpm --update
 
       - name: Checkout repo
         uses: actions/checkout@v2
