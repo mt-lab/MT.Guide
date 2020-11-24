@@ -14,7 +14,8 @@ jobs:
           sudo apt-get install miktex
           miktexsetup finish
           initexmf --set-config-value [MPM]AutoInstall=1
-          sudo updmap --admin
+          mpm --update-db
+          initexmf --update-fndb
 
       - name: Checkout repo
         uses: actions/checkout@v2
