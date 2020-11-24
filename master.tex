@@ -1,38 +1,4 @@
-\documentclass[a4paper,14pt]{extarticle}
-\usepackage{polyglossia}
-\setmainlanguage{russian}
-\setotherlanguage{english}
-\setmonofont{JetBrains Mono}
-\newfontfamily\latinfont{Courier New}
-\newfontfamily\cyrillicfont{B52}
-\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
-\usepackage{geometry} % Меняем поля страницы
-\geometry{left=2cm}% левое поле
-\geometry{right=1.5cm}% правое поле
-\geometry{top=1cm}% верхнее поле
-\geometry{bottom=2cm}% нижнее поле
-\usepackage{graphicx}
-\graphicspath{{pic1/}}
-\renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
-\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
-
-\usepackage{caption}
-\usepackage{color}
-\usepackage{xcolor}
-% Listing environment
-\usepackage[outputdir=auxillary]{minted}
-\newcommand{\imgh}[3]
-{
-\begin{figure}[h]
-    \center{\includegraphics[width=#1]{#2}}
-    \caption{#3}
-    \label{ris:#2}
-\end{figure}
-}
+\input{preamble}
 
 \begin{document}
 

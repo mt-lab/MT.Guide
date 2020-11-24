@@ -1,0 +1,49 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+%% Шрифты и кириллица
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\defaultfontfeatures{Ligatures=TeX}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\setmainfont{B52}
+\newfontfamily{\latinfont}{Courier New}
+\newfontfamily{\cyrillicfont}{B52}
+\newfontfamily{\cyrillicfonttt}{B52}
+
+%%
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
+
+%% Меняем поля страницы
+\usepackage[left=2cm,
+            right=1.5cm,
+            top=1cm,
+            bottom=2cm]{geometry}
+
+%% Работа с картинками
+\usepackage{graphicx}
+\graphicspath{{./src/images/}}
+
+%% Перечисления
+\renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
+
+%% Работа с фигурами и цветом
+\usepackage{caption}
+\usepackage{color}
+\usepackage{xcolor}
+\newcommand{\imgh}[3]
+{
+\begin{figure}[h]
+    \center{\includegraphics[width=#1]{#2}}
+    \caption{#3}
+    \label{ris:#2}
+\end{figure}
+}
+
+% Listing environment
+\usepackage[outputdir=auxillary]{minted}
