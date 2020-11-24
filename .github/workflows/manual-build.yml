@@ -12,13 +12,10 @@ jobs:
           echo "deb http://miktex.org/download/ubuntu ${DISTRIB_CODENAME} universe" | sudo tee /etc/apt/sources.list.d/miktex.list
           sudo apt-get update
           sudo apt-get install miktex
-          miktexsetup finish
-          initexmf --set-config-value [MPM]AutoInstall=1
-          mpm --update-db
-          initexmf --update-fndb
-          mpm --verbose --package-level=basic --upgrade
-          initexmf --mkmaps
-          initexmf --update-fndb
+          sudo miktexsetup --shared=yes finish
+          initexmf --admin --set-config-value [MPM]AutoInstall=1
+          initexmf --admin --update-fndb
+          initexmf --admin --update
 
       - name: Checkout repo
         uses: actions/checkout@v2
