@@ -1,4 +1,4 @@
-\documentclass[a4paper,14pt]{extarticle}
+\documentclass[a5paper,14pt]{extbook}
 
 %% Шрифты и кириллица
 \usepackage{fontspec}
@@ -6,19 +6,19 @@
 \defaultfontfeatures{Ligatures=TeX}
 \setdefaultlanguage{russian}
 \setotherlanguage{english}
-\setmainfont{B52}
+\setmainfont{Courier New}
 \newfontfamily{\latinfont}{Courier New}
-\newfontfamily{\cyrillicfont}{B52}
-\newfontfamily{\cyrillicfonttt}{B52}
+\newfontfamily{\cyrillicfont}{Courier New}
+\newfontfamily{\cyrillicfonttt}{Courier New}
 
-%%
-\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
+\usepackage{cite,float}
+
+%% Общее оформление
+\usepackage{indentfirst}%добавляем отступ первой строки абзаца
+\setlength{\parindent}{1.5cm}%задаём величину отступа
 
 %% Меняем поля страницы
-\usepackage[left=2cm,
-            right=1.5cm,
-            top=1cm,
-            bottom=2cm]{geometry}
+\usepackage[hscale=0.9, vscale=0.8]{geometry}
 
 %% Работа с картинками
 \usepackage{graphicx}
