@@ -9,13 +9,13 @@
       <envs />
       <main-file>$PROJECT_DIR$/master.tex</main-file>
       <output-path>$PROJECT_DIR$/output</output-path>
-      <auxil-path>$PROJECT_DIR$/auxillary</auxil-path>
+      <auxil-path>$PROJECT_DIR$/auxiliary</auxil-path>
       <compile-twice>false</compile-twice>
       <output-format>PDF</output-format>
       <latex-distribution>MIKTEX</latex-distribution>
       <has-been-run>true</has-been-run>
       <bib-run-config>[]</bib-run-config>
-      <makeindex-run-config />
+      <makeindex-run-config>[]</makeindex-run-config>
     </texify>
     <method v="2" />
   </configuration>
