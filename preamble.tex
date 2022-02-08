@@ -6,11 +6,10 @@
 \defaultfontfeatures{Ligatures=TeX}
 \setdefaultlanguage{russian}
 \setotherlanguage{english}
-\setmainfont{Courier New}
-\newfontfamily{\latinfont}{Courier New}
-\newfontfamily{\cyrillicfont}{Courier New}
-\newfontfamily{\cyrillicfonttt}{Courier New}
-
+\setmainfont{Latin Modern Roman}
+\newfontfamily{\latinfont}{Latin Modern Roman}
+\newfontfamily{\cyrillicfont}{Noto Sans}
+\newfontfamily{\cyrillicfonttt}{Noto Sans}
 \usepackage{cite,float}
 
 %% Общее оформление
@@ -44,6 +43,3 @@
     \label{ris:#2}
 \end{figure}
 }
-
-% Listing environment
-\usepackage[outputdir=auxiliary]{minted}
