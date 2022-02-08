@@ -11,11 +11,19 @@ jobs:
           sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
           echo "deb http://miktex.org/download/ubuntu ${DISTRIB_CODENAME} universe" | sudo tee /etc/apt/sources.list.d/miktex.list
           sudo apt-get update
-          sudo apt-get install texlive-full texlive-lang-all
+          sudo apt-get install texlive texlive-lang-russian
           
       - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Build pdf
         run: |
-         pdftex --output-directory=/ /master.tex
+         pdftex master.tex
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: Guide
+          path: /*.pdf
+          if-no-files-found: warn
+          retention-days: 90
+        
