@@ -3,7 +3,7 @@ on:
 
 jobs:
   manual-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Install TeXLive
         run: |
