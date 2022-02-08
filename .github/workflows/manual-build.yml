@@ -11,17 +11,11 @@ jobs:
           sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
           echo "deb http://miktex.org/download/ubuntu ${DISTRIB_CODENAME} universe" | sudo tee /etc/apt/sources.list.d/miktex.list
           sudo apt-get update
-          sudo apt-get install miktex
-          miktexsetup finish
-          initexmf --set-config-value [MPM]AutoInstall=1
-          initexmf --update-fndb
-          initexmf --mkmaps
-          mpm --find-updates
-          mpm --update
-
+          sudo apt-get install texlive-full texlive-lang-all
+          
       - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Build pdf
         run: |
-          miktex-xetex -file-line-error -interaction=nonstopmode -shell-escape -synctex=1 -output-directory=./output/ -aux-directory=./auxillary/ -include-directory=./src/tex/ -job-name=MT.Guide master.tex
+         pdftex --output-directory=/ /master.tex
