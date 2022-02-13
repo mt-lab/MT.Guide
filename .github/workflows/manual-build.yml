@@ -3,27 +3,27 @@ on:
 
 jobs:
   manual-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
-      - name: Install MikTex
+      - name: Install TeXLive
         run: |
           DISTRIB_CODENAME=$(grep -Po "(?<=^DISTRIB_CODENAME=).*" /etc/lsb-release)
           sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
           echo "deb http://miktex.org/download/ubuntu ${DISTRIB_CODENAME} universe" | sudo tee /etc/apt/sources.list.d/miktex.list
           sudo apt-get update
-          sudo apt-get install texlive texlive-lang-cyrillic
+          sudo apt-get install fonts-noto texlive texlive-lang-cyrillic texlive-xetex
           
       - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Build pdf
         run: |
-         pdftex master.tex
+         xelatex master.tex
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.3.1
         with:
           name: Guide
-          path: /*.pdf
+          path: master.pdf
           if-no-files-found: warn
           retention-days: 90
         
